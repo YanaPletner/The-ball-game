@@ -15,10 +15,16 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
     margin: auto;
-    border-radius: 50%;
     width: 100px;
     height: 100px;
+
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.2s;
     background-color: rgb(134, 172, 160);
     cursor: pointer;
+
 }
