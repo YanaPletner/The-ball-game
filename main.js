@@ -12,33 +12,27 @@ function onBallClick(elBall, maxDiameter, minDiameter) {
         elBall.style.height = elBallWidth + randomExpand + "px"
         elBall.innerHTML = elBallWidth + randomExpand
     }
-
     if (elBallWidth === +maxDiameter) {
-        console.log(true)
         getMinDiameter(elBall, minDiameter)
     }
     changeBallColor(elBall)
-}
-
-function changeBallColor(elB) {
-    const randomColor = getRandomColor()
-    elB.style.backgroundColor = randomColor
 }
 
 function swapColorAndSize() {
     const elBall1 = document.querySelector('.ball-1')
     const elBall2 = document.querySelector('.ball-2')
 
-    const elBall1Size = elBall1.innerHTML
-    const elBall2Size = elBall2.innerHTML
-    elBall1.style.width = +elBall2Size + 'px'
-    elBall1.style.height = +elBall2Size + 'px'
+    const elBall1Size = +elBall1.innerHTML
+    const elBall2Size = +elBall2.innerHTML
+
+    elBall1.style.width = elBall2Size + 'px'
+    elBall1.style.height = elBall2Size + 'px'
 
     elBall1.innerHTML = elBall2Size
     elBall2.innerHTML = elBall1Size
 
-    elBall2.style.width = +elBall1Size + 'px'
-    elBall2.style.height = +elBall1Size + 'px'
+    elBall2.style.width = elBall1Size + 'px'
+    elBall2.style.height = elBall1Size + 'px'
 
     const elBall1Color = window.getComputedStyle(elBall1).backgroundColor
     const elBall2Color = window.getComputedStyle(elBall2).backgroundColor
@@ -61,12 +55,23 @@ function reduceByRandomSize() {
         getReducedBall(elBall1, randomReduce)
     }
 
-    if (elBall2Width - randomReduce < 100) {
+    if (elBall2Width - randomReduce < minDiameter) {
         getMinDiameter(elBall2, minDiameter)
 
     } else {
         getReducedBall(elBall2, randomReduce)
     }
+}
+
+function changeBallColor(elB) {
+    const randomColor = getRandomColor()
+    elB.style.backgroundColor = randomColor
+}
+
+function changePageColor() {
+    const elBody = document.querySelector('body')
+    elBody.style.backgroundColor = getRandomColor()
+    elBody.style.transition = '1s'
 }
 
 function getMinDiameter(elBall, minDiameter) {
