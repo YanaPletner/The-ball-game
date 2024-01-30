@@ -28,3 +28,8 @@ h1 {
     cursor: pointer;
 
 }
+
+.ball-2 {
+    background-color: rgb(154, 123, 184);
+    margin-block: 40px;
+}
