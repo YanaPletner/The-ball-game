@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(15, 15, 15);
 }
 
 h1 {
@@ -16,30 +16,28 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100px;
+    height: 100px;
     margin: auto;
+    margin-block: 40px;
     border-radius: 50%;
     font-weight: bold;
     font-size: 22px;
     transition: 1s;
     cursor: pointer;
+    background-color: rgb(153, 178, 137);
 }
 
 .ball-1 {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(134, 172, 160);
+    background-color: rgb(189, 145, 188);
 }
 
 .ball-2 {
     width: 200px;
     height: 200px;
     background-color: rgb(154, 123, 184);
-    margin-block: 40px;
 }
 
 .ball-3 {
-    width: 100px;
-    height: 100px;
     background-color: rgb(201, 167, 143);
-    margin-block: 40px;
 }
