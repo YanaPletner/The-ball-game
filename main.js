@@ -1,15 +1,15 @@
 "use strict"
 
-function onBallClick(elB) {
+function onBallClick(elB, maxDiameter) {
     const randomExpand = getRandomInt(20, 60)
-    var elBallWidth = +elB.innerHTML
+    var elBallWidth = elB.innerHTML
 
-    if (elBallWidth < 400) {
+    if (elBallWidth < maxDiameter) {
         elB.style.width = +elBallWidth + randomExpand + "px"
         elB.style.height = +elBallWidth + randomExpand + "px"
         elB.innerHTML = +elBallWidth + randomExpand
     }
-    if (elBallWidth >= 400) {
+    if (elBallWidth >= maxDiameter) {
         elB.innerHTML = 100
         elB.style.width = +elB.innerHTML + "px"
         elB.style.height = +elB.innerHTML + "px"
