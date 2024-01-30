@@ -17,24 +17,29 @@ h1 {
     align-items: center;
 
     margin: auto;
-    width: 100px;
-    height: 100px;
-
     border-radius: 50%;
     font-weight: bold;
     font-size: 22px;
     transition: 1s;
-    background-color: rgb(134, 172, 160);
     cursor: pointer;
+}
 
+.ball-1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(134, 172, 160);
 }
 
 .ball-2 {
+    width: 200px;
+    height: 200px;
     background-color: rgb(154, 123, 184);
     margin-block: 40px;
 }
 
 .ball-3 {
+    width: 100px;
+    height: 100px;
     background-color: rgb(201, 167, 143);
     margin-block: 40px;
 }
