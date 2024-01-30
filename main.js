@@ -58,18 +58,14 @@ function reduceByRandomSize() {
         getMinDiameter(elBall1, minDiameter)
 
     } else {
-        elBall1.style.width = elBall1Width - randomReduce + 'px'
-        elBall1.style.height = elBall1Width - randomReduce + 'px'
-        elBall1.innerHTML = elBall1Width - randomReduce
+        getReducedBall(elBall1, randomReduce)
     }
 
     if (elBall2Width - randomReduce < 100) {
         getMinDiameter(elBall2, minDiameter)
 
     } else {
-        elBall2.style.width = elBall2Width - randomReduce + 'px'
-        elBall2.style.height = elBall2Width - randomReduce + 'px'
-        elBall2.innerHTML = elBall2Width - randomReduce
+        getReducedBall(elBall2, randomReduce)
     }
 }
 
@@ -83,4 +79,11 @@ function getMaxDiameter(elBall, maxDiameter) {
     elBall.style.width = maxDiameter + 'px'
     elBall.style.height = maxDiameter + 'px'
     elBall.innerHTML = maxDiameter
+}
+
+function getReducedBall(elBall, randomReduce) {
+    const elBallWidth = +elBall.innerHTML
+    elBall.style.width = elBallWidth - randomReduce + 'px'
+    elBall.style.height = elBallWidth - randomReduce + 'px'
+    elBall.innerHTML = elBallWidth - randomReduce
 }
