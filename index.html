@@ -10,8 +10,8 @@
 
 <body>
     <h1>The Ball Game</h1>
-    <button class="undo">Undo</button>
-    <button class="redo">Redo</button>
+    <button onclick="undo()" class="undo">Undo</button>
+    <button onclick="redo()" class="redo">Redo</button>
     <div onclick="onBallClick(this, 400, 100)" class="ball ball-1">100</div>
     <div onclick="onBallClick(this, 500, 100)" class="ball ball-2">200</div>
     <div onclick="swapColorAndSize()" class="ball ball-3">swap</div>
@@ -24,6 +24,8 @@
     <script src="util.js"></script>
     <script src="main.js"></script>
     <script src="resetBall.js"></script>
+    <script src="buttons.js"></script>
+
 </body>
 
 </html>
