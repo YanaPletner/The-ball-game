@@ -68,20 +68,6 @@ function changePageColor() {
     elBody.style.transition = '1s'
 }
 
-function reset() {
-    const elBall1 = document.querySelector('.ball-1')
-    const elBall2 = document.querySelector('.ball-2')
-    const elBody = document.querySelector('body')
-    const minDiameterBall1 = 100
-    const minDiameterBall2 = 200
-
-    getMinDiameter(elBall1, minDiameterBall1)
-    getMinDiameter(elBall2, minDiameterBall2)
-
-    elBall1.style.backgroundColor = 'rgb(189, 145, 188)'
-    elBall2.style.backgroundColor = 'rgb(154, 123, 184)'
-    elBody.style.backgroundColor = 'rgb(15, 15, 15)'
-}
 
 function changeBallColor(elB) {
     const randomColor = getRandomColor()
