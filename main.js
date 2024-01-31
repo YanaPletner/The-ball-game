@@ -1,5 +1,9 @@
 "use strict"
 
+function onInIt() {
+    makeInitialStyleMap()
+}
+
 function onBallClick(elBall, maxDiameter, minDiameter) {
     const randomExpand = getRandomInt(20, 60)
     var elBallWidth = +elBall.innerHTML
@@ -11,11 +15,15 @@ function onBallClick(elBall, maxDiameter, minDiameter) {
         elBall.style.width = elBallWidth + randomExpand + "px"
         elBall.style.height = elBallWidth + randomExpand + "px"
         elBall.innerHTML = elBallWidth + randomExpand
+        // saveGameState()
+
     }
     if (elBallWidth === +maxDiameter) {
         getMinDiameter(elBall, minDiameter)
     }
     changeBallColor(elBall)
+    saveGameState()
+    // console.log(gGameStates)
 }
 
 function swapColorAndSize() {
@@ -38,6 +46,8 @@ function swapColorAndSize() {
     const elBall2Color = window.getComputedStyle(elBall2).backgroundColor
     elBall1.style.backgroundColor = elBall2Color
     elBall2.style.backgroundColor = elBall1Color
+    saveGameState()
+
 }
 
 function reduceByRandomSize() {
@@ -60,12 +70,14 @@ function reduceByRandomSize() {
     } else {
         getReducedBall(elBall2, randomReduce)
     }
+    saveGameState()
 }
 
 function changePageColor() {
     const elBody = document.querySelector('body')
     elBody.style.backgroundColor = getRandomColor()
     elBody.style.transition = '1s'
+    saveGameState()
 }
 
 
